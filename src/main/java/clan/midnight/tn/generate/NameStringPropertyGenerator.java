@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 public class NameStringPropertyGenerator implements PropertyGenerator {
     private static final String CHARACTERS = "abcdefghijklmnopqrstuvwxyz";
     private final Random random;
+
     public NameStringPropertyGenerator() {
         this.random = new Random();
     }

@@ -9,10 +9,12 @@ public class DefaultStringPropertyGenerator implements PropertyGenerator {
     private static final String CHARACTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     private final int maxLength;
     private final Random random;
+
     public DefaultStringPropertyGenerator(int maxLength) {
         this.maxLength = maxLength;
         this.random = new Random();
     }
+
     public DefaultStringPropertyGenerator() {
         this(16);
     }

@@ -8,9 +8,11 @@ import java.util.Random;
 public class UuidStringPropertyGenerator implements PropertyGenerator {
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     private final Random random;
+
     public UuidStringPropertyGenerator() {
         this.random = new Random();
     }
+
     @Override
     public Property generate(Attribute attribute) {
         String uuid = generateRandomString(8) + "-" + generateRandomString(4) + "-" + generateRandomString(4) + generateRandomString(12);

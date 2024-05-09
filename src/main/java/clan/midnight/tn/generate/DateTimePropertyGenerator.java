@@ -10,16 +10,16 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class DateTimePropertyGenerator implements PropertyGenerator {
-    private static final String CHARACTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     private final long now;
     private final Random random;
     private final DateFormat dateFormat;
     private final long fluctuation;
+
     public DateTimePropertyGenerator() {
         this.now = System.currentTimeMillis();
         this.random = new Random();
         this.fluctuation = TimeUnit.DAYS.toMillis(365);
-        this.dateFormat = new SimpleDateFormat();;
+        this.dateFormat = new SimpleDateFormat();
     }
 
     @Override
